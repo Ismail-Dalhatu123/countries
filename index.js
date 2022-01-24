@@ -1,5 +1,8 @@
 require("dotenv").config();
-const server = require("express")();
+const express = require("express");
+const server = express();
+
+server.use(express.static("public"));
 
 const port = process.env.PORT || 9000;
 
