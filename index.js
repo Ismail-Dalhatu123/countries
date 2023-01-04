@@ -1446,12 +1446,12 @@ server.get("/", (req, res) =>
     ].map((c) => ({
       ...c,
       flag: {
-        x16: `https://api-i-countries.herokuapp.com/flags/16x16/${c.country_code.toLowerCase()}.png`,
-        x24: `https://api-i-countries.herokuapp.com/flags/24x24/${c.country_code.toLowerCase()}.png`,
-        x32: `https://api-i-countries.herokuapp.com/flags/32x32/${c.country_code.toLowerCase()}.png`,
-        x48: `https://api-i-countries.herokuapp.com/flags/48x48/${c.country_code.toLowerCase()}.png`,
-        x64: `https://api-i-countries.herokuapp.com/flags/64x64/${c.country_code.toLowerCase()}.png`,
-        x128: `https://api-i-countries.herokuapp.com/flags/128x128/${c.country_code.toLowerCase()}.png`,
+        x16: `/flags/16x16/${c.country_code.toLowerCase()}.png`,
+        x24: `/flags/24x24/${c.country_code.toLowerCase()}.png`,
+        x32: `/flags/32x32/${c.country_code.toLowerCase()}.png`,
+        x48: `/flags/48x48/${c.country_code.toLowerCase()}.png`,
+        x64: `/flags/64x64/${c.country_code.toLowerCase()}.png`,
+        x128: `/flags/128x128/${c.country_code.toLowerCase()}.png`,
       },
     }))
   )
