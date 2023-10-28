@@ -2,8 +2,18 @@ require("dotenv").config();
 const express = require("express");
 const server = express();
 const path = require("path");
+const cors = require("cors");
 
 server.use(express.static(path.join(__dirname, "public")));
+
+server.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "x-access-token", "x-refresh-token"],
+    credentials: true,
+  })
+);
 
 const port = process.env.PORT || 9000;
 
